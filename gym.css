@@ -1,16 +1,23 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Contenedor para limitar ancho y centrar en pantallas grandes */
+.container {
+  max-width: 480px; /* máximo ancho para celulares */
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
+/* Modificaciones para que se vea más grande en celular */
 body {
-  font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+  font-size: 18px; /* fuente base más grande para celular */
+  line-height: 1.5;
+  /* padding: 1rem;  -> opcional si usás container */
   background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
   color: #f2f2f2;
-  padding: 1rem;
+  overflow-x: hidden; /* para evitar scroll horizontal */
 }
+
+/* Aplica padding y max-width al body o contenido principal */
+/* Lo mejor es que todo tu contenido vaya dentro de un div.container en el HTML */
 
 /* Header */
 header {
@@ -23,28 +30,37 @@ header {
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem; /* un poco más grande */
   color: #FF6B00;
   margin-bottom: 1rem;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 nav a {
   color: #f2f2f2;
-  margin: 0 1rem;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
-  transition: color 0.3s;
+  font-size: 1.2rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 nav a:hover {
-  color: #FF6B00;
+  color: #fff;
+  background-color: #FF6B00;
 }
 
 /* Secciones */
 section {
   background-color: #1f1f1f;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 12px;
   margin-bottom: 2rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -52,40 +68,43 @@ section {
 
 section h2 {
   color: #FF6B00;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
 }
 
 ul {
   list-style: disc;
-  padding-left: 1.5rem;
+  padding-left: 1.7rem;
 }
 
 ul li {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
 }
 
 /* Formulario */
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.3rem;
 }
 
 form label {
   font-weight: bold;
   color: #ddd;
+  font-size: 1.1rem;
 }
 
 form input,
 form select,
 form textarea {
-  padding: 0.8rem;
+  padding: 1rem;
   border: 1px solid #444;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   background-color: #2a2a2a;
   color: #f2f2f2;
+  resize: vertical;
 }
 
 form input:focus,
@@ -99,10 +118,10 @@ form textarea:focus {
 button {
   background-color: #FF6B00;
   color: #fff;
-  padding: 1rem;
+  padding: 1.3rem;
   border: none;
   border-radius: 8px;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -110,44 +129,103 @@ button {
 
 button:hover {
   background-color: #e85d00;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 /* Contacto */
 #contacto p {
-  margin: 0.5rem 0;
+  margin: 0.7rem 0;
   font-weight: 500;
   color: #ccc;
+  font-size: 1.1rem;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-size: 1rem;
   color: #888;
   border-top: 1px solid #333;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+
   header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   nav a {
-    display: block;
-    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  form label,
+  form input,
+  form select,
+  form textarea,
+  button,
+  #contacto p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
   }
 
   section {
     padding: 1rem;
   }
 
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  ul li {
+    font-size: 0.95rem;
+  }
+
+  form label,
   form input,
   form select,
   form textarea,
+  button,
+  #contacto p {
+    font-size: 0.95rem;
+  }
+
   button {
-    font-size: 1rem;
+    padding: 0.9rem;
   }
 }
