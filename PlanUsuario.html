@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="usuario.css">
+  <title>Rutina Personalizada - FitnessMB</title>
+</head>
+<body>
+  <h1>Rutina Personalizada</h1>
+
+  <section class="cliente-info">
+    <h2>Datos del Cliente</h2>
+    <p><span class="detalle">Nombre:</span> Juan Pérez</p>
+    <p><span class="detalle">Edad:</span> 25 años</p>
+    <p><span class="detalle">Peso:</span> 70 kg</p>
+    <p><span class="detalle">Objetivo:</span> Ganar masa muscular</p>
+    <p><span class="detalle">Lesiones/Limitaciones:</span> Rodilla derecha (evitar impacto)</p>
+    <p><span class="detalle">Días de entrenamiento:</span> 4 por semana</p>
+    <p><span class="detalle">Plan:</span> 4 semanas con videos explicativos</p>
+  </section>
+
+  <section class="plan-entrenamiento">
+    <h2>Plan de Entrenamiento</h2>
+
+    <div class="dia" onclick="toggleEjercicios('dia1')">
+      <h3>Lunes - Cuadricpes/aductor</h3>
+    </div>
+    <div id="dia1" class="ejercicios">
+      <div class="ejercicio">
+        <span>Sentadilla Libre </span>
+        <span>4x12</span>
+        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+      </div>
+      <div id="video1" class="video">
+        <video width="300" controls>
+          <source src="videos/sentadillas.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </div>
+    <div id="dia1" class="ejercicios">
+      <div class="ejercicio">
+        <span>Sentadilla Hack </span>
+        <span>4x12</span>
+        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+      </div>
+      <div id="video1" class="video">
+        <video width="300" controls>
+          <source src="videos/sentadillas.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </div>
+    <div id="dia1" class="ejercicios">
+      <div class="ejercicio">
+        <span>Sentadilla Sumo </span>
+        <span>4x12</span>
+        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+      </div>
+      <div id="video1" class="video">
+        <video width="300" controls>
+          <source src="videos/sentadillas.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </div>
+    <div id="dia1" class="ejercicios">
+      <div class="ejercicio">
+        <span>Maquina de abduccion </span>
+        <span>4x12</span>
+        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+      </div>
+      <div id="video1" class="video">
+        <video width="300" controls>
+          <source src="videos/sentadillas.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </div>
+    <div id="dia1" class="ejercicios">
+      <div class="ejercicio">
+        <span>Sillon de cuadriceps</span>
+        <span>4x12</span>
+        <span class="emoji-video" onclick="mostrarVideo('video1', event)">🎥✅</span>
+      </div>
+      <div id="video1" class="video">
+        <video width="300" controls>
+          <source src="videos/sentadillas.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </div>
+
+    <div class="dia" onclick="toggleEjercicios('dia2')">
+      <h3>Miércoles - Tren Superior</h3>
+    </div>
+    <div id="dia2" class="ejercicios">
+      <div class="ejercicio">
+        <span>Press banca</span>
+        <span>series: 3x10 - peso: 40kg</span>
+        <span class="emoji-video" onclick="mostrarVideo('video2', event)">🎥✅</span>
+      </div>
+      <div id="video2" class="video">
+        <video width="300" controls>
+          <source src="videos/pressbanca.mp4" type="video/mp4">
+          Tu navegador no soporta el video.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="progreso">
+    <h2>Progreso</h2>
+    <p>Lunes - ✅ Completado</p>
+    <p>Miércoles - ⏳ En proceso</p>
+  </section>
+
+  <footer>
+    © 2025 FitnessMB
+  </footer>
+
+  <script>
+    function toggleEjercicios(id) {
+      const seccion = document.getElementById(id);
+      seccion.style.display = seccion.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function mostrarVideo(id, event) {
+      event.stopPropagation(); // para evitar que se cierren los ejercicios
+      const video = document.getElementById(id);
+      video.style.display = video.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>

@@ -12,10 +12,12 @@
 
     <header>
       <h1>Entrená Conmigo</h1>
+      <p>FitnessMB</p>
       <nav>
         <a href="#inicio">Inicio</a>
         <a href="#beneficios">Beneficios</a>
         <a href="#funciona">Cómo funciona</a>
+        <a href="#precios">Precios</a>
         <a href="#formulario">🔥 ¡Quiero mi plan!</a>
       </nav>
     </header>
@@ -57,6 +59,62 @@
       <p>En menos de 48 hs tenés tu plan completo. Solo tenés que seguirlo.</p>
     </section>
 
+
+    <!-- Precios -->
+<section id="precios">
+  <h2>💸 Planes y Precios</h2>
+  <p>Elegí el plan que mejor se adapte a tu objetivo y compromiso:</p>
+  <div class="precios-lista">
+    <div class="plan">
+      <h3>📅 4 Semanas</h3>
+      <p><strong>$8.500</strong></p>
+    </div>
+    <div class="plan">
+      <h3>📅 6 Semanas</h3>
+      <p><strong>$12.800</strong></p>
+    </div>
+    <div class="plan">
+      <h3>📅 8 Semanas</h3>
+      <p><strong>$14.800</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Extras -->
+<section id="extras">
+  <h2>🎥 Extras Opcionales</h2>
+  <p>Podés sumar estos servicios a tu plan base:</p>
+  <div class="precios-lista">
+    <div class="plan">
+      <h3>📄 Solo Plan escrito</h3>
+      <p>Incluye: nombres de ejercicios + series/reps</p>
+      <p><strong>Incluido en el precio base</strong></p>
+    </div>
+    <div class="plan">
+      <h3>📹 Plan con Videos</h3>
+      <p>Incluye: rutinas con video de cada ejercicio</p>
+      <p><strong>+ $2.500</strong></p>
+    </div>
+    <div class="plan">
+      <h3>🎙️ Videos + Explicación Detallada</h3>
+      <p>Incluye: videos editados + tips y correcciones</p>
+      <p><strong>+ $4.500</strong></p>
+    </div>
+    <div class="plan">
+      <h3>📲 Acompañamiento en tus entrenamientos</h3>
+      <p>Estoy presente durante tus entrenos</p>
+      <p><strong>+ $8.500</strong></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
     <!-- Formulario -->
     <section id="formulario">
       <h2>🔥 ¡Quiero mi plan personalizado!</h2>
@@ -85,6 +143,26 @@
 
         <label>¿Qué equipos tenés disponibles? (mancuernas, bandas, máquina, etc)</label>
         <textarea name="equipamiento"></textarea>
+
+      <label for="plan">Elegí tu plan:</label>
+        <select id="plan" name="plan">
+          <option value="0">Seleccionar</option>
+          <option value="8500">📅 4 Semanas - $8.500</option>
+          <option value="12800">📅 6 Semanas - $12.800</option>
+          <option value="14800">📅 8 Semanas - $14.800</option>
+        </select>
+
+      <label for="extra">Extras opcionales:</label>
+        <select id="extra" name="extra">
+          <option value="0">Ninguno</option>
+          <option value="2500">🎥 Solo videos - $2.500</option>
+          <option value="4500">🎥 Videos + Explicaciones - $4.500</option>
+          <option value="8500">🤝 Acompañamiento Presente - $8.500</option>
+        </select>
+
+        <p id="total">Total: $0</p>
+
+
 
         <button type="submit">💥 Quiero mi plan ahora</button>
     </form>
