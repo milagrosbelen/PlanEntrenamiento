@@ -1,99 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <title>Planes de Entrenamiento Personalizado</title>
-  <link rel="stylesheet" href="gym.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Plan de Entrenamiento Personalizado</title>
+  <link rel="stylesheet" href="gym.css" />
 </head>
 <body>
+  <div class="container">
 
-
-
-<div class="container">
     <header>
-    <h1>Entrená Conmigo</h1>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#funciona">¿Cómo funciona?</a>
-      <a href="#contacto">Contacto</a>
-      <a href="#formulario">💪 Comprar un plan</a>
-    </nav>
-  </header>
+      <h1>Entrená Conmigo</h1>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#funciona">Cómo funciona</a>
+        <a href="#formulario">🔥 ¡Quiero mi plan!</a>
+      </nav>
+    </header>
 
-  <!-- Sección de bienvenida -->
-  <section id="inicio">
-    <h2>¡Conseguí tus metas de forma fácil y rápida!</h2>
-    <p>Dentro de esta página vas a poder lograr tus objetivos con seguimientos personalizados. Vas a tener un plan armado especialmente para vos, con todo anotado paso a paso:</p>
-    <ul>
-      <li>Registro de ejercicios, pesos y repeticiones</li>
-      <li>Anotaciones personales por día</li>
-      <li>Videos explicativos para que aprendas bien la técnica</li>
-      <li>Seguimiento de tu progreso en cada entrenamiento</li>
-      <li>Acompañamiento por WhatsApp</li>
-    </ul>
-  </section>
+    <!-- Hero Section -->
+    <section id="inicio">
+      <h2>🔥 Transformá tu cuerpo. Hoy es el día.</h2>
+      <p>No más excusas. Este es tu momento para lograr el cuerpo que querés, con un plan 100% personalizado, simple y efectivo.</p>
+      <ul>
+        <li>✔️ Plan hecho a tu medida, según tu objetivo y horarios</li>
+        <li>✔️ Videos explicativos + espacio para anotar tus avances</li>
+        <li>✔️ Seguimiento real por WhatsApp, no estás sola/o</li>
+        <li>✔️ Resultados reales si seguís el plan como está</li>
+      </ul>
+      <p><strong>⚠️ Cupos limitados: abrí solo X planes por mes para dar un seguimiento real.</strong></p>
+    </section>
 
-  <!-- Cómo funciona -->
-  <section id="funciona">
-    <h2>¿Cómo funciona?</h2>
-    <p>Vos completás un formulario con tus datos y objetivos. Según eso, armamos un plan único para vos, día por día, con ejercicios detallados, videos, y espacio para registrar todo tu progreso. Vas a tener:</p>
-    <ul>
-      <li>Plan por días y semanas</li>
-      <li>Ejercicios con video tutorial</li>
-      <li>Lugar para anotar tus pesos, repeticiones y cómo te sentiste</li>
-      <li>Seguimiento real y motivación constante</li>
-    </ul>
-  </section>
+    <!-- Beneficios -->
+    <section id="beneficios">
+      <h2>💪 ¿Por qué elegir este plan?</h2>
+      <ul>
+        <li>✅ No es una rutina genérica: es para vos, según tu cuerpo y tus metas</li>
+        <li>✅ Acompañamiento cercano: si no sabés algo, te lo explico</li>
+        <li>✅ No necesitás experiencia: te enseño desde cero</li>
+        <li>✅ Vas a sentirte más fuerte, segura/o y motivada/o</li>
+      </ul>
+      <p><em>“Después de 3 semanas ya noté el cambio. ¡Nunca me había sentido tan constante!” – Clienta feliz</em></p>
+    </section>
 
-  <!-- Formulario -->
-  <section id="formulario">
-    <h2>Armá tu plan personalizado</h2>
-    <form>
-      <label>Nombre completo:</label>
-      <input type="text" name="nombre" required>
+    <!-- Cómo funciona -->
+    <section id="funciona">
+      <h2>📋 ¿Cómo funciona?</h2>
+      <p>Es simple y rápido:</p>
+      <ol>
+        <li>Completás el formulario con tus datos y objetivos</li>
+        <li>Recibís tu plan personalizado día por día con videos + indicaciones</li>
+        <li>Entrenás y me enviás tus avances por WhatsApp</li>
+      </ol>
+      <p>En menos de 48 hs tenés tu plan completo. Solo tenés que seguirlo.</p>
+    </section>
 
-      <label>Edad:</label>
-      <input type="number" name="edad" required>
+    <!-- Formulario -->
+    <section id="formulario">
+      <h2>🔥 ¡Quiero mi plan personalizado!</h2>
+      <p><strong>Completá tus datos acá y empezamos. Te voy a contactar personalmente para darte tu plan 👇</strong></p>
+      <form id="formularioWhatsApp">
+        <label>Nombre completo:</label>
+        <input type="text" name="nombre" required />
 
-      <label>Objetivo (ganar masa, bajar grasa, tonificar, etc):</label>
-      <input type="text" name="objetivo" required>
+        <label>Edad:</label>
+        <input type="number" name="edad" required />
 
-      <label>¿Entrenás en gimnasio o en casa?</label>
-      <select name="lugar">
-        <option value="gimnasio">Gimnasio</option>
-        <option value="casa">Casa</option>
-      </select>
+        <label>Objetivo (ganar masa, bajar grasa, tonificar, etc):</label>
+        <input type="text" name="objetivo" required />
 
-      <label>¿Cuántos días podés entrenar por semana?</label>
-      <input type="number" name="dias" required>
+        <label>¿Entrenás en gimnasio o en casa?</label>
+        <select name="lugar" required>
+          <option value="gimnasio">Gimnasio</option>
+          <option value="casa">Casa</option>
+        </select>
 
-      <label>¿Tenés lesiones o limitaciones?</label>
-      <textarea name="lesiones"></textarea>
+        <label>¿Cuántos días podés entrenar por semana?</label>
+        <input type="number" name="dias" required />
 
-      <label>¿Qué equipos tenés disponibles? (mancuernas, bandas, máquina, etc)</label>
-      <textarea name="equipamiento"></textarea>
+        <label>¿Tenés lesiones o limitaciones?</label>
+         <textarea name="lesiones"></textarea>
 
-      <button type="submit">Listo ✅</button>
+        <label>¿Qué equipos tenés disponibles? (mancuernas, bandas, máquina, etc)</label>
+        <textarea name="equipamiento"></textarea>
+
+        <button type="submit">💥 Quiero mi plan ahora</button>
     </form>
-  </section>
+    </section>
 
-  <!-- Contacto -->
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>WhatsApp: 3515223831</p>
-    <p>Email: belenza.entrenamiento@gmail.com</p>
-    <p>Instagram: @belenza.fitness</p>
-  </section>
+    <!-- Contacto -->
+    <section id="contacto">
+      <h2>📲 Contacto directo</h2>
+      <p>WhatsApp: <strong>3515223831</strong></p>
+      <p>Email: <strong>milagrospedrasa1@gmail.com</strong></p>
+      <p>Instagram: <strong>@fitnessMB</strong></p>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Entrená Conmigo - Todos los derechos reservados.</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Entrená Conmigo - Todos los derechos reservados.</p>
+    </footer>
+  </div>
 
-</div>
-  
- 
+  <script src="index.js"></script>
 </body>
 </html>

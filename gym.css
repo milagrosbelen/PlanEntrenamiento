@@ -1,23 +1,19 @@
-/* Contenedor para limitar ancho y centrar en pantallas grandes */
+/* Contenedor */
 .container {
-  max-width: 480px; /* máximo ancho para celulares */
+  max-width: 480px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-/* Modificaciones para que se vea más grande en celular */
+/* Fondo y texto base */
 body {
-font-family: 'Roboto', sans-serif;
-  font-size: 18px; /* fuente base más grande para celular */
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   line-height: 1.5;
-  /* padding: 1rem;  -> opcional si usás container */
   background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
   color: #f2f2f2;
-  overflow-x: hidden; /* para evitar scroll horizontal */
+  overflow-x: hidden;
 }
-
-/* Aplica padding y max-width al body o contenido principal */
-/* Lo mejor es que todo tu contenido vaya dentro de un div.container en el HTML */
 
 /* Header */
 header {
@@ -26,12 +22,12 @@ header {
   text-align: center;
   border-radius: 12px;
   margin-bottom: 2rem;
-  border-bottom: 3px solid #FF6B00;
+  border-bottom: 3px solid #1a00ad;
 }
 
 header h1 {
-  font-size: 2.8rem; /* un poco más grande */
-  color: #FF6B00;
+  font-size: 2.8rem;
+  color: #ff0800;
   margin-bottom: 1rem;
 }
 
@@ -54,7 +50,7 @@ nav a {
 
 nav a:hover {
   color: #fff;
-  background-color: #FF6B00;
+  background-color: #1a00ad;
 }
 
 /* Secciones */
@@ -67,7 +63,7 @@ section {
 }
 
 section h2 {
-  color: #FF6B00;
+  color: #ff0800;
   margin-bottom: 1.2rem;
   font-size: 2rem;
 }
@@ -110,13 +106,13 @@ form textarea {
 form input:focus,
 form select:focus,
 form textarea:focus {
-  border-color: #FF6B00;
+  border-color: #1a00ad;
   outline: none;
 }
 
 /* Botón */
 button {
-  background-color: #FF6B00;
+  background-color: #ff0800;
   color: #fff;
   padding: 1.3rem;
   border: none;
@@ -128,7 +124,7 @@ button {
 }
 
 button:hover {
-  background-color: #e85d00;
+  background-color: #cc0600;
   transform: scale(1.05);
 }
 
@@ -138,6 +134,18 @@ button:hover {
   font-weight: 500;
   color: #ccc;
   font-size: 1.1rem;
+}
+a {
+    background-color: #ff0800;
+  color: #fff;
+  padding: 1.3rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
 }
 
 /* Footer */
@@ -151,81 +159,27 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-  body {
-    font-size: 17px;
-  }
-
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  nav a {
-    font-size: 1.1rem;
-    padding: 0.3rem 0.6rem;
-  }
-
-  section {
-    padding: 1.5rem;
-  }
-
-  section h2 {
-    font-size: 1.8rem;
-  }
-
-  ul li {
+  body { font-size: 17px; }
+  header h1 { font-size: 2.5rem; }
+  nav a { font-size: 1.1rem; padding: 0.3rem 0.6rem; }
+  section { padding: 1.5rem; }
+  section h2 { font-size: 1.8rem; }
+  ul li { font-size: 1rem; }
+  form label, form input, form select, form textarea, button, #contacto p {
     font-size: 1rem;
   }
-
-  form label,
-  form input,
-  form select,
-  form textarea,
-  button,
-  #contacto p {
-    font-size: 1rem;
-  }
-
-  button {
-    padding: 1rem;
-  }
+  button { padding: 1rem; }
 }
 
 @media (max-width: 480px) {
-  body {
-    font-size: 16px;
-  }
-
-  header h1 {
-    font-size: 2.2rem;
-  }
-
-  nav a {
-    font-size: 1rem;
-    padding: 0.25rem 0.5rem;
-  }
-
-  section {
-    padding: 1rem;
-  }
-
-  section h2 {
-    font-size: 1.6rem;
-  }
-
-  ul li {
+  body { font-size: 16px; }
+  header h1 { font-size: 2.2rem; }
+  nav a { font-size: 1rem; padding: 0.25rem 0.5rem; }
+  section { padding: 1rem; }
+  section h2 { font-size: 1.6rem; }
+  ul li { font-size: 0.95rem; }
+  form label, form input, form select, form textarea, button, #contacto p {
     font-size: 0.95rem;
   }
-
-  form label,
-  form input,
-  form select,
-  form textarea,
-  button,
-  #contacto p {
-    font-size: 0.95rem;
-  }
-
-  button {
-    padding: 0.9rem;
-  }
+  button { padding: 0.9rem; }
 }
